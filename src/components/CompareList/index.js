@@ -35,7 +35,7 @@ const CompareList = ({ repositories }) => (
   </Container>
 );
 
-CompareList.PropTypes = {
+CompareList.propTypes = {
   repositories: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
