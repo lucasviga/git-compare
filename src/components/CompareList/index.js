@@ -33,7 +33,9 @@ const CompareList = ({ repositories, removeRepository, updateRepository }) => (
             {repository.lastCommit} <small>last commit</small>
           </li>
 
-          <button type="button" onClick={updateRepository(repository.id)}>Refresh</button>
+          <button type="button" onClick={() => updateRepository(repository.id)}>
+            Refresh
+          </button>
         </ul>
       </Repository>
     ))}
@@ -56,6 +58,7 @@ CompareList.propTypes = {
     }),
   ).isRequired,
   removeRepository: PropTypes.func.isRequired,
+  updateRepository: PropTypes.func.isRequired,
 };
 
 export default CompareList;
